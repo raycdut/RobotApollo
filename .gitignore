@@ -3,3 +3,7 @@
 ################################################################################
 
 /RobotApolloSln/packages
+/RobotApolloSln/RobotApollo.SpiderMachine.App/bin/Debug
+/RobotApolloSln/RobotApollo.SpiderMachine.App/obj/Debug
+/RobotApolloSln/RobotApollo.WeChat.WebApp/bin
+/RobotApolloSln/RobotApollo.WeChat.WebApp/obj/Debug
