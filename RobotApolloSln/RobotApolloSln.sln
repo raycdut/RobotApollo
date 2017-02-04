@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotApollo.SpiderMachine.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotApollo.WeChat.WebApp", "RobotApollo.WeChat.WebApp\RobotApollo.WeChat.WebApp.csproj", "{087BA53F-B838-4E0E-995E-B4C8F13A05E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotApollo.WeChat.CommonService", "RobotApollo.Common\RobotApollo.WeChat.CommonService.csproj", "{48902150-484C-46A1-AE03-214712ABD4A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{087BA53F-B838-4E0E-995E-B4C8F13A05E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{087BA53F-B838-4E0E-995E-B4C8F13A05E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{087BA53F-B838-4E0E-995E-B4C8F13A05E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48902150-484C-46A1-AE03-214712ABD4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48902150-484C-46A1-AE03-214712ABD4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48902150-484C-46A1-AE03-214712ABD4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48902150-484C-46A1-AE03-214712ABD4A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
