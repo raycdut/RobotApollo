@@ -5,9 +5,16 @@ namespace RobotApollo.SpiderMachine.App
     {
         static void Main(string[] args)
         {
-            LogHelper.WriteLog(typeof(Program), "Sprider machine start at:" + DateTime.Now.ToLongTimeString());
+            try
+            {
+                LogHelper.WriteLog(typeof(Program), "Spider machine start at:" + DateTime.Now.ToLongTimeString());
 
-            Console.ReadKey();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteLog(typeof(Program), ex);
+            }
+
 
         }
     }
