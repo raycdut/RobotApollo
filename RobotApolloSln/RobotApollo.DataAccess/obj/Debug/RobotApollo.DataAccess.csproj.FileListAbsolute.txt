@@ -1,5 +1,0 @@
-C:\myfiles\MyProjects\RobotApollo\RobotApolloSln\RobotApollo.DataAccess\bin\Debug\RobotApollo.DataAccess.dll
-C:\myfiles\MyProjects\RobotApollo\RobotApolloSln\RobotApollo.DataAccess\bin\Debug\RobotApollo.DataAccess.pdb
-C:\myfiles\MyProjects\RobotApollo\RobotApolloSln\RobotApollo.DataAccess\obj\Debug\RobotApollo.DataAccess.csprojResolveAssemblyReference.cache
-C:\myfiles\MyProjects\RobotApollo\RobotApolloSln\RobotApollo.DataAccess\obj\Debug\RobotApollo.DataAccess.dll
-C:\myfiles\MyProjects\RobotApollo\RobotApolloSln\RobotApollo.DataAccess\obj\Debug\RobotApollo.DataAccess.pdb
