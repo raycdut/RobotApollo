@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RobotApollo.SpiderMachine.App.wanda;
+using System;
 namespace RobotApollo.SpiderMachine.App
 {
     class Program
@@ -8,7 +9,7 @@ namespace RobotApollo.SpiderMachine.App
             try
             {
                 LogHelper.WriteLog(typeof(Program), "Spider machine start at:" + DateTime.Now.ToLongTimeString());
-
+                WandaSpider.WandaSpiderRun();
             }
             catch (Exception ex)
             {
