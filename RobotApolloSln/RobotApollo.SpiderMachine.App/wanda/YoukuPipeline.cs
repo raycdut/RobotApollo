@@ -14,11 +14,12 @@ namespace RobotApollo.SpiderMachine.App.wanda
 
             foreach (WandaFilm entry in resultItems.Results["VideoResult"])
             {
+
                 repository.SaveFilmData(new Models.Movie()
                 {
                     CreatedBy = "SpiderMachine",
                     CreatedDate = DateTime.Now,
-                    Description = "test",
+                    Description = entry.Description,
                     Name = entry.MovieName,
                     ShowDate = DateTime.Now
                 });

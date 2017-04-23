@@ -18,7 +18,19 @@ namespace RobotApollo.DataAccess
 
         public void SaveFilmData(Movie movie)
         {
-            DB.Movies.Add(movie);
+            var tmp = DB.Movies.FirstOrDefault(i => i.Name == movie.Name);
+            if (tmp == null)
+            {
+                DB.Movies.Add(movie);
+            }
+            else
+            {
+                tmp.UpdatedBy = "SpiderMachine";
+                tmp.UpdatedDate = DateTime.Now;
+                tmp.Description = movie.Description;
+                
+            }
+           
             DB.SaveChanges();
         }
     }

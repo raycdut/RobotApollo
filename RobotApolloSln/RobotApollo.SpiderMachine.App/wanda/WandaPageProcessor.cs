@@ -12,19 +12,31 @@ namespace RobotApollo.SpiderMachine.App.wanda
         protected override void Handle(Page page)
         {
             List<WandaFilm> results = new List<WandaFilm>();
-            var videoContainer = page.Selectable.Select(Selectors.XPath("//div[@class='tagContent']"));
+
+            LogHelper.WriteLog(typeof(WandaPageProcessor), "process current show ");
+            var videoContainer = page.Selectable.Select(Selectors.XPath("//div[@id='tagContent0']"));
             if (videoContainer != null)
             {
-                var movieList = videoContainer.SelectList(Selectors.XPath("//dl/a")).Nodes();
-                foreach (ISelectable item  in movieList)
+                var movieList = videoContainer.SelectList(Selectors.XPath("//div[@id='tagContent0']/ul/li")).Nodes();
+                int cnt = 1;
+                foreach (var item in movieList)
                 {
-                    if (!string.IsNullOrEmpty(item.GetValue()))
+                    var aname = item.Select(Selectors.XPath(string.Format("//div[@id='tagContent0']/ul/li[{0}]/dl/a", cnt)));
+                    var aDesc = item.Select(Selectors.XPath(string.Format("//div[@id='tagContent0']/ul/li[{0}]/div/div/a[@class='awhite home_talk2']", cnt)));
+
+                    if (!string.IsNullOrEmpty(aname.GetValue()))
                     {
+                        var url = aname.Links().Nodes()[0].GetValue();
+                        //page.AddTargetRequest(new Request(url, null));
+
                         results.Add(new WandaFilm()
                         {
-                            MovieName = item.GetValue()
+                            MovieName = aname.GetValue(),
+                            Description = aDesc.GetValue(),
+                            Url = url
                         });
                     }
+                    cnt += 1;
                 }
             }
 
