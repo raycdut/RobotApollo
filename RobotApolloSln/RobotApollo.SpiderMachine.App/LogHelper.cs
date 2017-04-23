@@ -19,6 +19,7 @@ namespace RobotApollo.SpiderMachine.App
         public static void WriteLog(Type t, Exception ex)
         {
             Trace.WriteLine(ex.Message);
+            Console.WriteLine(ex.Message);
             Trace.WriteLine(ex.StackTrace);
             log4net.ILog log = log4net.LogManager.GetLogger(t);
             log.Error("Error", ex);

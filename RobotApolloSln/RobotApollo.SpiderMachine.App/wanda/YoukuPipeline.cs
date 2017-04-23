@@ -1,19 +1,27 @@
 ﻿using System;
 using DotnetSpider.Core;
 using DotnetSpider.Core.Pipeline;
+using RobotApollo.DataAccess;
 
 namespace RobotApollo.SpiderMachine.App.wanda
 {
     internal class YoukuPipeline : BasePipeline
     {
-        private static long count = 0;
 
         public override void Process(ResultItems resultItems)
         {
-            foreach (YoukuVideo entry in resultItems.Results["VideoResult"])
+            var repository = new SpiderRepository();
+
+            foreach (WandaFilm entry in resultItems.Results["VideoResult"])
             {
-                count++;
-                Console.WriteLine($"[YoukuVideo {count}] {entry.Name}");
+                repository.SaveFilmData(new Models.Movie()
+                {
+                    CreatedBy = "SpiderMachine",
+                    CreatedDate = DateTime.Now,
+                    Description = "test",
+                    Name = entry.MovieName,
+                    ShowDate = DateTime.Now
+                });
             }
 
             // Other actions like save data to DB. 可以自由实现插入数据库或保存到文件
