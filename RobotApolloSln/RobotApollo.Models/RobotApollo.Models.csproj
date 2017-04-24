@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Movie.cs" />
+    <Compile Include="MoviePhoto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpiderDB.cs" />
   </ItemGroup>

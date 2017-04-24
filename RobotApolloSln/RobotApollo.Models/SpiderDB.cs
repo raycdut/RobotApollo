@@ -12,7 +12,8 @@ namespace RobotApollo.Models
             Database.SetInitializer<SpiderDB>(new DropCreateDatabaseIfModelChanges<SpiderDB>());
         }
 
-         public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<MoviePhoto> MoviePhotos { get; set; }
     }
 
 }
