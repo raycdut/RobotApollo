@@ -32,10 +32,16 @@ namespace RobotApollo.DataAccess
                 tmp.UpdatedBy = "SpiderMachine";
                 tmp.UpdatedDate = DateTime.Now;
                 tmp.Description = movie.Description;
+                tmp.DetailsUrl = movie.DetailsUrl;
              
             }
            
             DB.SaveChanges();
+        }
+
+        public List<Movie> GetFilmData()
+        {
+            return DB.Movies.Where(i => i.ShowDate > DateTime.Now || i.CanWatch == true).ToList();
         }
     }
 }

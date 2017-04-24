@@ -5,7 +5,7 @@ using RobotApollo.DataAccess;
 
 namespace RobotApollo.SpiderMachine.App.wanda
 {
-    internal class YoukuPipeline : BasePipeline
+    internal class WandaPipeline : BasePipeline
     {
 
         public override void Process(ResultItems resultItems)
@@ -21,7 +21,8 @@ namespace RobotApollo.SpiderMachine.App.wanda
                     CreatedDate = DateTime.Now,
                     Description = entry.Description,
                     Name = entry.MovieName,
-                    ShowDate = entry.MovieTime
+                    ShowDate = entry.MovieTime,
+                    DetailsUrl = entry.Url
                 });
             }
 

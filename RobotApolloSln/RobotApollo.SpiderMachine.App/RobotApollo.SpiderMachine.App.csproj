@@ -149,9 +149,11 @@
     <Compile Include="LogHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wanda\WandaDetailPageProcessor.cs" />
+    <Compile Include="wanda\WandaDetailPipeline.cs" />
     <Compile Include="wanda\WandaSpider.cs" />
     <Compile Include="wanda\WandaPageProcessor.cs" />
-    <Compile Include="wanda\YoukuPipeline.cs" />
+    <Compile Include="wanda\WandaPipeline.cs" />
     <Compile Include="wanda\WandaFilm.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -33,7 +33,8 @@ namespace RobotApollo.SpiderMachine.App.wanda
                         {
                             MovieName = aname.GetValue(),
                             Description = aDesc.GetValue(),
-                            Url = url
+                            Url = url,
+                            
                         });
                     }
                     cnt += 1;
@@ -72,27 +73,11 @@ namespace RobotApollo.SpiderMachine.App.wanda
 
             page.AddResultItem("VideoResult", results);
 
-            /*
-            // 利用 Selectable 查询并构造自己想要的数据对象
-            var totalVideoElements = page.Selectable.SelectList(Selectors.XPath("//div[@class='yk-pack pack-film']")).Nodes();
-            
-            foreach (var videoElement in totalVideoElements)
-            {
-                var video = new WandaFilm()
-                {
-                    Name = videoElement.Select(Selectors.XPath(".//img[@class='quic']/@alt")).GetValue()
-                };
-                results.Add(video);
-            }
 
-            // Save data object by key. 以自定义KEY存入page对象中供Pipeline调用
-            
-
-            // Add target requests to scheduler. 解析需要采集的URL
-            foreach (var url in page.Selectable.SelectList(Selectors.XPath("//ul[@class='yk-pages']")).Links().Nodes())
-            {
-                page.AddTargetRequest(new Request(url.GetValue(), null));
-            }*/
+            //foreach (var url in results)
+            //{
+            //    page.AddTargetRequest(new Request(url.Url, null));
+            //}
         }
     }
 }
