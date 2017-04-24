@@ -1,4 +1,6 @@
-﻿namespace RobotApollo.SpiderMachine.App.wanda
+﻿using System;
+
+namespace RobotApollo.SpiderMachine.App.wanda
 {
     internal class WandaFilm
     {
@@ -7,6 +9,6 @@
         public string Description { get; set; }
 
         public string Url { get; set; }
-
+        public DateTime MovieTime { get; internal set; }
     }
 }

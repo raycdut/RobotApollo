@@ -21,6 +21,10 @@ namespace RobotApollo.DataAccess
             var tmp = DB.Movies.FirstOrDefault(i => i.Name == movie.Name);
             if (tmp == null)
             {
+                if (movie.ShowDate == DateTime.MinValue)
+                {
+                    movie.ShowDate = DateTime.Now;
+                }
                 DB.Movies.Add(movie);
             }
             else
@@ -28,7 +32,7 @@ namespace RobotApollo.DataAccess
                 tmp.UpdatedBy = "SpiderMachine";
                 tmp.UpdatedDate = DateTime.Now;
                 tmp.Description = movie.Description;
-                
+             
             }
            
             DB.SaveChanges();

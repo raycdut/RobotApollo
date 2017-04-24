@@ -21,7 +21,7 @@ namespace RobotApollo.SpiderMachine.App.wanda
                     CreatedDate = DateTime.Now,
                     Description = entry.Description,
                     Name = entry.MovieName,
-                    ShowDate = DateTime.Now
+                    ShowDate = entry.MovieTime
                 });
             }
 
