@@ -14,6 +14,8 @@ namespace RobotApollo.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
+        public string FilmId { get; set; }
+
         public bool CanWatch { get; set; }
         public string DetailsUrl { get; set; }
         public string Director { get; set; }

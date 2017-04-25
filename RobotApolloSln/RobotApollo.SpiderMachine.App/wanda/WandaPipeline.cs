@@ -22,7 +22,11 @@ namespace RobotApollo.SpiderMachine.App.wanda
                     Description = entry.Description,
                     Name = entry.MovieName,
                     ShowDate = entry.MovieTime,
-                    DetailsUrl = entry.Url
+                    DetailsUrl = entry.Url,
+                    FilmId = entry.FilmId,
+                    CanWatch = entry.CanWatch
+                    
+                    
                 });
             }
 

@@ -9,6 +9,29 @@ namespace RobotApollo.SpiderMachine.App.wanda
         public string Description { get; set; }
 
         public string Url { get; set; }
+
+        public string FilmId
+        {
+            get
+            {
+                var id = string.Empty;
+
+                if (Url.EndsWith(".html")) {
+
+
+                    id = Url.Substring(Url.LastIndexOf('_')+1).TrimEnd(".html".ToCharArray());
+                }
+                else
+                {
+                    id = Url.Substring(Url.LastIndexOf('=')+1);
+                }
+
+                return id;
+
+            }
+        }
+
+        public string ID { get; set; }
         public bool CanWatch { get; set; }
         public string Director { get; set; }
         public string Actors { get; set; }

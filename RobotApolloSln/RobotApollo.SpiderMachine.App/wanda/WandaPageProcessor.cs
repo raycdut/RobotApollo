@@ -34,7 +34,7 @@ namespace RobotApollo.SpiderMachine.App.wanda
                             MovieName = aname.GetValue(),
                             Description = aDesc.GetValue(),
                             Url = url,
-                            
+                            CanWatch = true
                         });
                     }
                     cnt += 1;
@@ -64,7 +64,8 @@ namespace RobotApollo.SpiderMachine.App.wanda
                             MovieName = aname.GetValue(),
                             Description = aDesc.GetValue(),
                             Url = url,
-                            MovieTime = time
+                            MovieTime = time,
+                            CanWatch =false
                         });
                     }
                     cnt += 1;

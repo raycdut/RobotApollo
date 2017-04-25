@@ -33,11 +33,31 @@ namespace RobotApollo.DataAccess
                 tmp.UpdatedDate = DateTime.Now;
                 tmp.Description = movie.Description;
                 tmp.DetailsUrl = movie.DetailsUrl;
-             
+                tmp.FilmId = movie.FilmId;
+                tmp.CanWatch = movie.CanWatch;
             }
            
             DB.SaveChanges();
         }
+
+        public void UpdateFileData(Movie movie)
+        {
+            var tmp = DB.Movies.FirstOrDefault(i => i.FilmId == movie.FilmId);
+            if (tmp != null)
+            {
+                tmp.UpdatedBy = "SpiderMachine";
+                tmp.UpdatedDate = DateTime.Now;
+                tmp.Director = movie.Director;
+                tmp.Actors = movie.Actors;
+                tmp.Type = movie.Type;
+                tmp.Country = movie.Country;
+                tmp.Edition = movie.Edition;
+                tmp.Length = movie.Length;
+                tmp.LogDesc = movie.LogDesc;
+            }
+            DB.SaveChanges();
+        }
+
 
         public List<Movie> GetFilmData()
         {
