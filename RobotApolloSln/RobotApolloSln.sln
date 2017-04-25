@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotApollo.SpiderMachine.App", "RobotApollo.SpiderMachine.App\RobotApollo.SpiderMachine.App.csproj", "{26533BF0-6537-4045-BB1A-A1C46D5C5F9D}"
 EndProject
@@ -68,6 +68,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotApollo.DataAccess", "RobotApollo.DataAccess\RobotApollo.DataAccess.csproj", "{51DDA452-A804-440C-B518-58C148802ED3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotApollo.Models", "RobotApollo.Models\RobotApollo.Models.csproj", "{B66F31FD-C9A3-4391-B949-50F4C85A1434}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,10 @@ Global
 		{51DDA452-A804-440C-B518-58C148802ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51DDA452-A804-440C-B518-58C148802ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51DDA452-A804-440C-B518-58C148802ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66F31FD-C9A3-4391-B949-50F4C85A1434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66F31FD-C9A3-4391-B949-50F4C85A1434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66F31FD-C9A3-4391-B949-50F4C85A1434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66F31FD-C9A3-4391-B949-50F4C85A1434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,6 +10,7 @@ namespace RobotApollo.SpiderMachine.App
             {
                 LogHelper.WriteLog(typeof(Program), "Spider machine start at:" + DateTime.Now.ToLongTimeString());
                 WandaSpider.WandaSpiderRun();
+                WandaSpider.WandaDetailsSpiderRun();
             }
             catch (Exception ex)
             {
